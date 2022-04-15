@@ -6,7 +6,7 @@
 /*   By: sle-huec <sle-huec@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 15:05:34 by sle-huec          #+#    #+#             */
-/*   Updated: 2022/04/08 16:53:26 by sle-huec         ###   ########.fr       */
+/*   Updated: 2022/04/15 15:07:10 by sle-huec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
+#include <libft.h>
+#include <ft_printf.h>
 
 typedef struct s_int
 {

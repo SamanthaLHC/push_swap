@@ -6,42 +6,57 @@
 #    By: sle-huec <sle-huec@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/08 15:24:23 by sle-huec          #+#    #+#              #
-#    Updated: 2022/04/15 13:36:20 by sle-huec         ###   ########.fr        #
+#    Updated: 2022/04/15 14:53:02 by sle-huec         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CFLAGS = -Wall -Wextra -Werror -g3
-
-SRC = push_swap.c
-
 NAME = push_swap	
 
-INC = 	-I .\
-		-I ./ft_libft_printf\
-		-I ./ft_libft_printf/libft
 
-LIBFT = ./ft_libft_printf/libftprintf.a
-	
-OBJ = $(SRC:%.c=%.o)
-	
+CFLAGS = -MMD -Wall -Wextra -Werror -g3
+CC = cc
+SRCS = 		$(addprefix $(SRCS_PATH), \
+				push_swap.c \
+				check_input.c \
+			)
+INC = -I./\
+		-I./ft_libft_printf\
+		-I./ft_libft_printf/libft
+
+
+SRCS_PATH = ./srcs/
+OBJ_PATH = ./objs/
+LIBFT = ./ft_libft_printf/libftprintf.a	
+
+
+OBJ = $(SRCS:$(SRCS_PATH)%.c=$(OBJ_PATH)%.o)
+DEP = $(SRCS:$(SRCS_PATH)%.c=$(OBJ_PATH)%.d)
+
+
 all: $(NAME)
 
 $(NAME): $(OBJ) $(LIBFT)
-	ar -rcs $(NAME) $(OBJ)
+	$(CC) $(OBJ) -o $(NAME) $(LIBFT)
 
 ${LIBFT}:
-		make -C ./ft_libft_printf
+		make -C ./ft_libft_printf all
 
-%.o: %.c 
-	cc $(CFLAGS) -c $< -o $@ $(INC)
+$(OBJ_PATH)%.o: $(SRCS_PATH)%.c 
+	mkdir -p $(OBJ_PATH)
+	$(CC) $(CFLAGS) -c $< -o $@ $(INC)
 
 clean:
-	rm -re $(OBJ)
+	rm -rf $(OBJ) $(DEP)
+	rm -rf $(OBJ_PATH)
+	make -C ./ft_libft_printf/ clean
 
 fclean: clean
-	rm -rf $(NAME)
+	rm -f $(NAME)
+	rm -f $(LIBFT)
 
 re: fclean	
 	make all
 
 .PHONY: all clean fclean re
+
+-include $(DEP)
