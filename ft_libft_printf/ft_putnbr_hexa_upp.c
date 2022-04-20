@@ -9,7 +9,7 @@
 /*   Updated: 2022/04/20 13:14:32 by sam              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
+
 #include "libft.h"
 
 static int	ft_ct(unsigned int n)

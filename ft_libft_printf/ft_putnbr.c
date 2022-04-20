@@ -9,7 +9,7 @@
 /*   Updated: 2022/04/20 13:15:57 by sam              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
+
 #include "ft_printf.h"
 
 static	int	ft_counting(int n)
