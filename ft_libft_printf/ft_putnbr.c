@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sle-huec <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: sam <sam@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/05 16:17:41 by sle-huec          #+#    #+#             */
-/*   Updated: 2022/01/06 15:46:35 by sle-huec         ###   ########.fr       */
+/*   Updated: 2022/04/20 13:15:57 by sam              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
 #include "ft_printf.h"
 
-int	static	ft_counting(int n)
+static	int	ft_counting(int n)
 {
 	int	count;
 

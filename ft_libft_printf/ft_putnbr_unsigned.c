@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_unsigned.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sle-huec <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: sam <sam@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/31 13:38:43 by sle-huec          #+#    #+#             */
-/*   Updated: 2022/01/06 15:48:21 by sle-huec         ###   ########.fr       */
+/*   Updated: 2022/04/20 13:13:29 by sam              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
 #include "libft.h"
 
-int	static	ft_cont(unsigned int n)
+static int	ft_cont(unsigned int n)
 {
 	int	count;
 

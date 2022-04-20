@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_put_ptr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sle-huec <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: sam <sam@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/31 13:49:59 by sle-huec          #+#    #+#             */
-/*   Updated: 2022/01/06 15:45:09 by sle-huec         ###   ########.fr       */
+/*   Updated: 2022/04/20 13:15:29 by sam              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
 #include "libft.h"
 
-int	static	ft_cnt(unsigned long int n)
+static int	ft_cnt(unsigned long int n)
 {
 	int	count;
 
@@ -27,7 +27,7 @@ int	static	ft_cnt(unsigned long int n)
 	return (count);
 }
 
-void	static	ft_put_hexa(unsigned long int n)
+static void	ft_put_hexa(unsigned long int n)
 {
 	char	*base_hexa;
 
