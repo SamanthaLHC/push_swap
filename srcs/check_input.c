@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_input.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sle-huec <sle-huec@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sam <sam@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/15 11:48:41 by sle-huec          #+#    #+#             */
-/*   Updated: 2022/04/15 18:02:27 by sle-huec         ###   ########.fr       */
+/*   Updated: 2022/04/20 18:50:02 by sam              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,50 +30,26 @@ int	ft_input_is_digit(char *input)
 	}
 	return (0);
 }
+
 /*
-int	ft_is_int(char *input)
+int	ft_duplicate(char *input)
 {
 	int	i;
 
 	i = 0;
-	if (input[i] == '0')
-		i++;
-	if (input[i] == '-' || input[i] == '+')
-	{
-		i++;
-		if (input[i] == '0')
-			i++;
-		if (ft_strlen(input) > 10)
-		{
-			ft_printf("Error\n");
-			return (-1);
-		}
-	}
 }
-
-int	ft_duplicate(char *input)
+*/
+int	ft_check_before_parsing(char *input)
 {
-	int i;
+	int	err;
 
-	i = 0;
-}
-int	ft_errors(char *input)
-{
+	err = 0;
 	if (ft_input_is_digit(input) == -1)
+		return (-1);
+	ft_atoi(input, &err);
+	if (err == -1)
 	{
-		ft_printf("Error\n");
 		return (-1);
 	}
-	//if (ft_duplicate(input) == -1)
-	//{
-	//	ft_printf("Error\n");
-	//	return (-1);
-	//}
-	//if (ft_is_int(input) == -1)
-	//{
-	//	ft_printf("Error\n");
-	//	return (-1);
-	//}	
 	return (0);
 }
-//*/

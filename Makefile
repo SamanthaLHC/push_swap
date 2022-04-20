@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: sle-huec <sle-huec@student.42.fr>          +#+  +:+       +#+         #
+#    By: sam <sam@student.42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/08 15:24:23 by sle-huec          #+#    #+#              #
-#    Updated: 2022/04/15 14:53:02 by sle-huec         ###   ########.fr        #
+#    Updated: 2022/04/20 18:35:12 by sam              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,7 +54,8 @@ fclean: clean
 	rm -f $(NAME)
 	rm -f $(LIBFT)
 
-re: fclean	
+re: fclean
+	make -C ./ft_libft_printf re
 	make all
 
 .PHONY: all clean fclean re

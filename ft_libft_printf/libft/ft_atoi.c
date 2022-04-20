@@ -6,14 +6,15 @@
 /*   By: sam <sam@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/03 16:23:25 by sle-huec          #+#    #+#             */
-/*   Updated: 2022/04/20 17:10:57 by sam              ###   ########.fr       */
+/*   Updated: 2022/04/20 18:34:16 by sam              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #define FT_INT_MAX 2147483647
-#define FT_INT_MIN -2147483848
+#define FT_INT_MIN -2147483648
 
-int	ft_is_int(int *result, char **str, int neg_or_pos)
+int	ft_is_int(long int *result, char c, int neg_or_pos)
 {
 	int	limit;
 	int	quotien;
@@ -24,19 +25,19 @@ int	ft_is_int(int *result, char **str, int neg_or_pos)
 		limit = FT_INT_MIN;
 	quotien = limit / 10 * neg_or_pos;
 	remainder = limit % 10 * neg_or_pos;
-	if ((*result * 10 > quotien)
-		|| ((*result * 10 == quotien) && (*str[i] - '0') > remainder))
+	if ((*result > quotien)
+		|| ((*result == quotien) && (c - '0') > remainder))
 	{
-		ft_putstr("Error\n");
+		ft_putstr_fd("Error\n", 2);
 		return (-1);
 	}
-	*result = *result * 10 + str[i] - '0';
+	*result = *result * 10 + c - '0';
 	return (0);
 }
 
 int	check_pars(char *str, int i, int neg_or_pos, int *err)
 {
-	int	result;
+	long int	result;
 
 	result = 0;
 	while (str[i] >= '0' && str[i] <= '9')
@@ -54,13 +55,11 @@ int	check_pars(char *str, int i, int neg_or_pos, int *err)
 int	ft_atoi(const char *nptr, int *err)
 {
 	int		i;
-	int		result;
 	int		neg_or_pos;
 	char	*str;
 
 	str = (char *)nptr;
 	i = 0;
-	result = 0;
 	neg_or_pos = 1;
 	while ((str[i] && str[i] >= 9 && str[i] <= 13) || str[i] == 32)
 		i++;

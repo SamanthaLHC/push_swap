@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sle-huec <sle-huec@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sam <sam@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 15:05:34 by sle-huec          #+#    #+#             */
-/*   Updated: 2022/04/15 17:54:13 by sle-huec         ###   ########.fr       */
+/*   Updated: 2022/04/20 18:45:57 by sam              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,8 @@ typedef struct s_int
 	struct s_int	*next;
 }				t_int;
 
-int	ft_errors(char *input);
+int	ft_check_before_parsing(char *input);
 int	ft_input_is_digit(char *input);
+
 
 #endif
