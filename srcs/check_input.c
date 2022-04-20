@@ -30,10 +30,25 @@ int	ft_input_is_digit(char *input)
 	}
 	return (0);
 }
-
+/*
 int	ft_is_int(char *input)
 {
+	int	i;
 
+	i = 0;
+	if (input[i] == '0')
+		i++;
+	if (input[i] == '-' || input[i] == '+')
+	{
+		i++;
+		if (input[i] == '0')
+			i++;
+		if (ft_strlen(input) > 10)
+		{
+			ft_printf("Error\n");
+			return (-1);
+		}
+	}
 }
 
 int	ft_duplicate(char *input)
@@ -42,7 +57,6 @@ int	ft_duplicate(char *input)
 
 	i = 0;
 }
-*/
 int	ft_errors(char *input)
 {
 	if (ft_input_is_digit(input) == -1)
@@ -62,3 +76,4 @@ int	ft_errors(char *input)
 	//}	
 	return (0);
 }
+//*/
