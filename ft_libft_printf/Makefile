@@ -3,14 +3,16 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: sle-huec <marvin@42.fr>                    +#+  +:+       +#+         #
+#    By: sam <sam@student.42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/21 15:51:28 by sle-huec          #+#    #+#              #
-#    Updated: 2022/01/06 15:57:30 by sle-huec         ###   ########.fr        #
+#    Updated: 2022/04/20 13:12:12 by sam              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CFLAGS = -Wall -Wextra -Werror -I./libft
+
+CC = cc
 
 SRC = ft_putnbr_unsigned.c \
 	  ft_printf.c \

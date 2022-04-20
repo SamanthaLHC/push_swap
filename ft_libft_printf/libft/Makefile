@@ -3,13 +3,16 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: sle-huec <marvin@42.fr>                    +#+  +:+       +#+         #
+#    By: sam <sam@student.42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/24 14:03:48 by sle-huec          #+#    #+#              #
-#    Updated: 2021/12/20 11:48:24 by sle-huec         ###   ########.fr        #
+#    Updated: 2022/04/20 13:13:03 by sam              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
 CFLAGS = -Wall -Wextra -Werror
+
+CC = cc
 
 SRC = ft_isalpha.c \
 	  ft_isdigit.c \
