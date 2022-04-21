@@ -6,7 +6,7 @@
 #    By: sam <sam@student.42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/24 14:03:48 by sle-huec          #+#    #+#              #
-#    Updated: 2022/04/20 13:13:03 by sam              ###   ########.fr        #
+#    Updated: 2022/04/21 14:39:22 by sam              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,7 +47,15 @@ SRC = ft_isalpha.c \
 	  ft_strmapi.c \
 	  ft_striteri.c \
 	  ft_itoa.c \
-	  ft_split.c
+	  ft_split.c \
+	  ft_lstnew.c \
+	  ft_lstsize.c \
+	  ft_lstlast.c \
+	  ft_lstadd_front.c \
+	  ft_lstadd_back.c \
+	  ft_lstdelone.c \
+	  ft_lstclear.c \
+	  ft_lstiter.c
 
 OBJ = ${SRC:%.c=%.o}
 
@@ -68,19 +76,5 @@ fclean: clean
 	rm -rf ${NAME} 
 
 re: fclean all 
-
-BONUS_SRC = ft_lstnew.c \
-			ft_lstsize.c \
-			ft_lstlast.c \
-			ft_lstadd_front.c \
-			ft_lstadd_back.c \
-			ft_lstdelone.c \
-			ft_lstclear.c \
-			ft_lstiter.c
-
-BONUS_OBJ = ${BONUS_SRC:%.c=%.o}
-
-bonus: ${NAME} ${BONUS_OBJ} libft.h
-	ar rcs ${NAME} ${BONUS_OBJ}
 
 .PHONY: all clean fclean re bonus

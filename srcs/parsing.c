@@ -1,26 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   parsing.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sam <sam@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/08 15:05:34 by sle-huec          #+#    #+#             */
-/*   Updated: 2022/04/21 14:33:41 by sam              ###   ########.fr       */
+/*   Created: 2022/04/21 10:19:00 by sam               #+#    #+#             */
+/*   Updated: 2022/04/21 16:04:00 by sam              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "push_swap.h"
 
-# include <stdio.h>
-# include <unistd.h>
-# include <stdlib.h>
-# include "libft.h"
-# include "ft_printf.h"
+int	get_element_from_input(char *input, t_list **list)
+{
+	int				err;
+	int				*content;
+	t_list			*new_elem;
 
-int	ft_check_before_parsing(char *input);
-int	ft_input_is_digit(char *input);
-int	get_element_from_input(char *input, t_list **list);
-
-#endif
+	err = 0;
+	new_elem = NULL;
+	content = malloc(sizeof(*content));
+	if (!content)
+		return (-1);
+	*content = ft_atoi(input, &err);
+	new_elem = ft_lstnew(content);
+	if (!new_elem)
+		return (-1);
+	ft_lstadd_back(list, new_elem);
+	return (0);
+}

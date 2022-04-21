@@ -6,7 +6,7 @@
 /*   By: sam <sam@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/15 11:48:41 by sle-huec          #+#    #+#             */
-/*   Updated: 2022/04/20 18:50:02 by sam              ###   ########.fr       */
+/*   Updated: 2022/04/21 10:18:41 by sam              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,8 +48,6 @@ int	ft_check_before_parsing(char *input)
 		return (-1);
 	ft_atoi(input, &err);
 	if (err == -1)
-	{
 		return (-1);
-	}
 	return (0);
 }
