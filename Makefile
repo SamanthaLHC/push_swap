@@ -6,12 +6,11 @@
 #    By: sam <sam@student.42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/08 15:24:23 by sle-huec          #+#    #+#              #
-#    Updated: 2022/04/21 10:20:55 by sam              ###   ########.fr        #
+#    Updated: 2022/04/22 14:56:56 by sam              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap	
-
 
 CFLAGS = -MMD -Wall -Wextra -Werror -g3
 CC = cc
@@ -23,7 +22,6 @@ SRCS = 		$(addprefix $(SRCS_PATH), \
 INC = -I./\
 		-I./ft_libft_printf\
 		-I./ft_libft_printf/libft
-
 
 SRCS_PATH = ./srcs/
 OBJ_PATH = ./objs/

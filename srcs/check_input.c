@@ -6,7 +6,7 @@
 /*   By: sam <sam@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/15 11:48:41 by sle-huec          #+#    #+#             */
-/*   Updated: 2022/04/21 10:18:41 by sam              ###   ########.fr       */
+/*   Updated: 2022/04/22 15:04:30 by sam              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,14 +31,27 @@ int	ft_input_is_digit(char *input)
 	return (0);
 }
 
-/*
-int	ft_duplicate(char *input)
+int	ft_duplicate(t_list *list)
 {
-	int	i;
+	t_list	*tmp_iter;
 
-	i = 0;
+	while (list)
+	{
+		tmp_iter = list->next;
+		while (tmp_iter)
+		{
+			if (*(int *)list->content == *(int *)tmp_iter->content)
+			{
+				ft_putstr_fd("Error\n", 2);
+				return (-1);
+			}
+			tmp_iter = tmp_iter->next;
+		}
+		list = list->next;
+	}
+	return (0);
 }
-*/
+
 int	ft_check_before_parsing(char *input)
 {
 	int	err;
@@ -51,3 +64,5 @@ int	ft_check_before_parsing(char *input)
 		return (-1);
 	return (0);
 }
+
+// need check guillemets ??? 
