@@ -6,7 +6,7 @@
 /*   By: sam <sam@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/15 11:48:41 by sle-huec          #+#    #+#             */
-/*   Updated: 2022/04/22 15:04:30 by sam              ###   ########.fr       */
+/*   Updated: 2022/04/24 21:19:10 by sam              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_input_is_digit(char *input)
 			i++;
 		if (ft_isdigit(input[i]) != 1)
 		{
-			ft_printf("Error\n");
+			ft_putstr_fd("Error\n", 2);
 			return (-1);
 		}
 		i++;
@@ -66,3 +66,18 @@ int	ft_check_before_parsing(char *input)
 }
 
 // need check guillemets ??? 
+
+int	count_elem_in_pile(t_list *pile)
+{
+	int	i;
+
+	i = 0;
+	while (pile)
+	{
+		i++;
+		pile = pile->next;
+	}
+	if (i == 1 || i == 0)
+		return (-1);
+	return (0);
+}

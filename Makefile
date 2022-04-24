@@ -6,7 +6,7 @@
 #    By: sam <sam@student.42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/08 15:24:23 by sle-huec          #+#    #+#              #
-#    Updated: 2022/04/22 14:56:56 by sam              ###   ########.fr        #
+#    Updated: 2022/04/22 19:21:09 by sam              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,6 +18,7 @@ SRCS = 		$(addprefix $(SRCS_PATH), \
 				push_swap.c \
 				check_input.c \
 				parsing.c \
+				mv_swap.c \
 			)
 INC = -I./\
 		-I./ft_libft_printf\
