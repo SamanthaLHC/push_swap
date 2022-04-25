@@ -6,7 +6,7 @@
 /*   By: sle-huec <sle-huec@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 12:58:19 by sle-huec          #+#    #+#             */
-/*   Updated: 2022/04/25 17:57:49 by sle-huec         ###   ########.fr       */
+/*   Updated: 2022/04/25 18:32:52 by sle-huec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,3 +76,12 @@ int	main(int ac, char **av)
 	list = NULL;
 	i = 1;
 	if (ac < 2)
+		return (-1);
+	while (i < ac)
+	{
+		if (ft_check_before_parsing(av[i]) == -1)
+			return (-1);
+	}
+	return (0);
+}
+

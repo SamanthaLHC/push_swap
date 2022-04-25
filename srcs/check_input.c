@@ -6,7 +6,7 @@
 /*   By: sle-huec <sle-huec@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/15 11:48:41 by sle-huec          #+#    #+#             */
-/*   Updated: 2022/04/25 18:21:35 by sle-huec         ###   ########.fr       */
+/*   Updated: 2022/04/25 18:53:47 by sle-huec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,24 @@ int	ft_duplicate(char *input)
 	}
 	return (0);
 }
+
+int	ft_check_before_parsing(char *input)
+{
+	int	err;
+
+	err = 0;
+	if (ft_input_is_digit(input) == -1)
+		return (-1);
+	if (ft_duplicate(input) == -1)
+		return (-1);
+	/*
+	ft_atoi(input, &err);
+	if (err == -1)
+		return (-1);
+	*/
+	return (0);
+}
+
 /*
 FAIRE UN DUPLICATE A PARTIR DE L INPUT AVEC LE MM FCTIONNEMENT QU INTER
 

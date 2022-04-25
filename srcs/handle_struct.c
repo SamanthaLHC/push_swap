@@ -1,15 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   mv_rotate.c                                        :+:      :+:    :+:   */
+/*   handle_struct.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sle-huec <sle-huec@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/25 15:53:33 by sle-huec          #+#    #+#             */
-/*   Updated: 2022/04/25 18:53:44 by sle-huec         ###   ########.fr       */
+/*   Created: 2022/04/25 18:45:15 by sle-huec          #+#    #+#             */
+/*   Updated: 2022/04/25 18:47:14 by sle-huec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//save le content du remier element dans un tmp. 
-// passer d'elem en elem et assigner le content de next a prev.
-// une fois que next == NULL elem prend la val de tmp
+/*
+ft_init_struct()
+{
+	
+}
+*/
