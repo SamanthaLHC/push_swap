@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_input.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sam <sam@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: sle-huec <sle-huec@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/15 11:48:41 by sle-huec          #+#    #+#             */
-/*   Updated: 2022/04/24 21:19:10 by sam              ###   ########.fr       */
+/*   Updated: 2022/04/25 18:21:35 by sle-huec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,26 +31,28 @@ int	ft_input_is_digit(char *input)
 	return (0);
 }
 
-int	ft_duplicate(t_list *list)
+int	ft_duplicate(char *input)
 {
-	t_list	*tmp_iter;
+	int	i;
+	int	j;
 
-	while (list)
+	i = 1;
+	j = i + 1;
+	while (input[i])
 	{
-		tmp_iter = list->next;
-		while (tmp_iter)
+		while (input[j])
 		{
-			if (*(int *)list->content == *(int *)tmp_iter->content)
-			{
-				ft_putstr_fd("Error\n", 2);
+			if (input[i] == input[j])
 				return (-1);
-			}
-			tmp_iter = tmp_iter->next;
+			j++;
 		}
-		list = list->next;
+		i++;
+		j = i + 1;
 	}
 	return (0);
 }
+/*
+FAIRE UN DUPLICATE A PARTIR DE L INPUT AVEC LE MM FCTIONNEMENT QU INTER
 
 int	ft_check_before_parsing(char *input)
 {
@@ -64,9 +66,9 @@ int	ft_check_before_parsing(char *input)
 		return (-1);
 	return (0);
 }
-
+*/
 // need check guillemets ??? 
-
+/*
 int	count_elem_in_pile(t_list *pile)
 {
 	int	i;
@@ -81,3 +83,5 @@ int	count_elem_in_pile(t_list *pile)
 		return (-1);
 	return (0);
 }
+*/
+//attention ligne vide

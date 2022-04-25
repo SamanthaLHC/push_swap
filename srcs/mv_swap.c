@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   mv_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sam <sam@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: sle-huec <sle-huec@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/22 20:26:38 by sam               #+#    #+#             */
-/*   Updated: 2022/04/24 22:08:39 by sam              ###   ########.fr       */
+/*   Updated: 2022/04/25 17:59:23 by sle-huec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
+// A MODIFIER AVEC LA MANIERE LISTE CHAINEE CIRCULAIRE 
 void	ft_swap(t_list **pile)
 {
 	t_list	*tmp_head;

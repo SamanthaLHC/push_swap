@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   parsing.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sam <sam@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: sle-huec <sle-huec@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/21 10:19:00 by sam               #+#    #+#             */
-/*   Updated: 2022/04/23 21:02:23 by sam              ###   ########.fr       */
+/*   Updated: 2022/04/25 17:58:10 by sle-huec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+/*
 int	get_element_from_input(char *input, t_list **list)
 {
 	int				err;
@@ -30,3 +31,7 @@ int	get_element_from_input(char *input, t_list **list)
 	ft_lstadd_back(list, new_elem);
 	return (0);
 }
+*/
+
+// convertir les arg en index avec les content du plus petit au plus grand 
+// avec 
