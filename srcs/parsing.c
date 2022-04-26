@@ -12,26 +12,21 @@
 
 #include "push_swap.h"
 
-/*
-int	get_element_from_input(char *input, t_list **list)
+int	get_element_from_input(char *input, t_linked_list **linked_list)
 {
 	int				err;
-	int				*content;
-	t_list			*new_elem;
+	int				nb;
+	t_linked_list	*new_elem;
 
 	err = 0;
 	new_elem = NULL;
-	content = malloc(sizeof(*content));
-	if (!content)
-		return (-1);
-	*content = ft_atoi(input, &err);
-	new_elem = ft_lstnew(content);
+	nb = ft_atoi(input, &err);
+	new_elem = ft_lstnew_int(nb);
 	if (!new_elem)
 		return (-1);
-	ft_lstadd_back(list, new_elem);
+	ft_lstadd_back(linked_list, new_elem);
 	return (0);
 }
-*/
 
 // convertir les arg en index avec les content du plus petit au plus grand 
 // avec 

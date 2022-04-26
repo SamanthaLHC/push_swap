@@ -10,9 +10,21 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-ft_init_struct()
+#include "push_swap.h"
+
+void	init_struct_info(t_struct_info *struct_info)
 {
-	
+	struct_info->stack_size = 0;
 }
-*/
+
+t_list	*ft_lstnew_int(int content)
+{
+	struct s_list	*new_elem;
+
+	new_elem = malloc(sizeof(t_list));
+	if (!new_elem)
+		return (NULL);
+	new_elem->content = content;
+	new_elem->next = NULL;
+	return (new_elem);
+}

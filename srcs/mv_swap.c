@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include "push_swap.h"
-// A MODIFIER AVEC LA MANIERE LISTE CHAINEE CIRCULAIRE 
+
 void	ft_swap(t_list **pile)
 {
 	t_list	*tmp_head;

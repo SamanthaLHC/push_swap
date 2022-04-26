@@ -19,40 +19,38 @@
 # include "libft.h"
 # include "ft_printf.h"
 
-typedef struct s_stack_a
+typedef struct s_linked_list
 {
-	void			*content;
-	struct s_list	*next;
-	struct s_list	*previous;
+	int						nb;
+	struct s_linked_list	*next;
+}							t_linked_list;
 
-}					t_stack_a;
-
-typedef struct s_stack_info
+typedef struct s_struct_info
 {
-	int				stack_size;
-	t_stack_a		*head_first_elem;
-}					t_stack_info;
+	int	stack_size;
+	int	index_arg;
+}		t_struct_info;
 
 /* ************************************************************************** */
 /*    handle_struct.c                                                         */
 /* ************************************************************************** */
 
-
+void	init_struct_info(t_struct_info *struct_info);
+t_list	*ft_lstnew_int(int content);
 
 /* ************************************************************************** */
 /*    check_input.c                                                           */
 /* ************************************************************************** */
 
-int		ft_check_before_parsing(char *input);
 int		ft_input_is_digit(char *input);
 int		ft_duplicate(char *input);
-int		count_elem_in_pile(t_list *pile);
+int		ft_check_before_parsing(char *input);
 
 /* ************************************************************************** */
 /*    parsing.c                                                               */
 /* ************************************************************************** */
 
-int		get_element_from_input(char *input, t_list **list);
+int		get_element_from_input(char *input, t_linked_list **linked_list);
 
 /* ************************************************************************** */
 /*    mv_swap.c                                                               */

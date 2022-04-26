@@ -10,6 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-//save le content du remier element dans un tmp. 
+//save le content du premier element dans un tmp. 
 // passer d'elem en elem et assigner le content de next a prev.
 // une fois que next == NULL elem prend la val de tmp

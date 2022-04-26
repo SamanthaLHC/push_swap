@@ -61,45 +61,14 @@ int	ft_check_before_parsing(char *input)
 		return (-1);
 	if (ft_duplicate(input) == -1)
 		return (-1);
-	/*
+	if (struct_info->stack_size == 1 || struct_info->stack_size == 0)
+		return (-1);	
 	ft_atoi(input, &err);
 	if (err == -1)
-		return (-1);
-	*/
+		return (-1);	
 	return (0);
 }
 
-/*
-FAIRE UN DUPLICATE A PARTIR DE L INPUT AVEC LE MM FCTIONNEMENT QU INTER
+//CHECK POUR PASSER LES ZEROS ??
 
-int	ft_check_before_parsing(char *input)
-{
-	int	err;
-
-	err = 0;
-	if (ft_input_is_digit(input) == -1)
-		return (-1);
-	ft_atoi(input, &err);
-	if (err == -1)
-		return (-1);
-	return (0);
-}
-*/
-// need check guillemets ??? 
-/*
-int	count_elem_in_pile(t_list *pile)
-{
-	int	i;
-
-	i = 0;
-	while (pile)
-	{
-		i++;
-		pile = pile->next;
-	}
-	if (i == 1 || i == 0)
-		return (-1);
-	return (0);
-}
-*/
 //attention ligne vide

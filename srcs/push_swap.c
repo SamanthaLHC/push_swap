@@ -12,12 +12,6 @@
 
 #include "push_swap.h"
 
-/*
-carefull: need cast *(int*) for content because of the func's param
-void *content 	
- */
-
-
 //test et debugg
 void	print_arg(t_list *list)
 {
@@ -27,61 +21,30 @@ void	print_arg(t_list *list)
 		list = list->next;
 	}
 }
-//test et debugg
-/*
-void	free_elem_in_list(t_list *list)
-{
-	t_list	*tmp;
-
-	while (list)
-	{
-		free(list->content);
-		free(list);
-	}
-}
 
 int	main(int ac, char **av)
 {
 	int				i;
-	t_list			*list;
+	t_linked_list	*linked_list;
+	t_struct_info	*struct_info;
 
-	list = NULL;
+	linked_list = NULL;
+	struct_info = NULL;
 	i = 1;
+	init_struct_info(struct_info);
+	struct_info->stack_size = ac;
 	if (ac < 2)
 		return (-1);
-// faire une fonction check_and_parse??
 	while (i < ac)
 	{
 		if (ft_check_before_parsing(av[i]) == -1)
 			return (-1);
-		get_element_from_input(av[i], &list);
+		get_element_from_input(av[i], &linked_list);
 		i++;
 	}
-	ft_duplicate(list);
-	if (ft_sa(&list) == -1)
+	if (ft_sa(&linked_list) == -1)
 		return (-1);
 	//^^^^^^^^^
-	print_arg(list);
-	free_elem_in_list(list);
-
+	print_arg(linked_list);
 	return (0);
 }
-*/
-
-int	main(int ac, char **av)
-{
-	int				i;
-	t_list			*list;
-
-	list = NULL;
-	i = 1;
-	if (ac < 2)
-		return (-1);
-	while (i < ac)
-	{
-		if (ft_check_before_parsing(av[i]) == -1)
-			return (-1);
-	}
-	return (0);
-}
-
