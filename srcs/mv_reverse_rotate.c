@@ -1,56 +1,59 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   mv_rotate.c                                        :+:      :+:    :+:   */
+/*   mv_reverse_rotate.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sam <sam@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/25 15:53:33 by sle-huec          #+#    #+#             */
-/*   Updated: 2022/04/27 19:18:56 by sam              ###   ########.fr       */
+/*   Created: 2022/04/27 13:49:38 by sam               #+#    #+#             */
+/*   Updated: 2022/04/27 19:20:29 by sam              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_rotate(t_link **stack)
+void	ft_reverse_rotate(t_link **stack)
 {
-	t_link	*first;
+	t_link	*last;
 
-	first = *stack;
-	*stack = (*stack)->next;
-	ft_get_last(*stack)->next = first;
-	first->next = NULL;
+	last = ft_get_last(*stack);
+	ft_link_front(stack, last);
+	while (last->next != *stack)
+	{
+		last = last->next;
+	}
+	last->next = NULL;
 }
 
-int	ft_ra(t_link **stack_a)
+int	ft_rra(t_link **stack_a)
 {
 	if (count_elem_in_stack(*stack_a) == -1
 		|| count_elem_in_stack(*stack_a) == 0)
 		return (-1);
-	ft_rotate(stack_a);
-	ft_printf("ra\n");
+	ft_reverse_rotate(stack_a);
+	ft_printf("rra\n");
 	return (0);
 }
 
-int	ft_rb(t_link **stack_b)
+int	ft_rrb(t_link **stack_b)
 {
 	if (count_elem_in_stack(*stack_b) == -1
 		|| count_elem_in_stack(*stack_b) == 0)
 		return (-1);
-	ft_rotate(stack_b);
-	ft_printf("rb\n");
+	ft_reverse_rotate(stack_b);
+	ft_printf("rrb\n");
 	return (0);
 }
 
-int	ft_rr(t_link **stack_a, t_link **stack_b)
+int	ft_rrr(t_link **stack_a, t_link **stack_b)
 {
 	if (count_elem_in_stack(*stack_a) == -1
 		|| count_elem_in_stack(*stack_a) == 0
 		|| count_elem_in_stack(*stack_b) == -1
 		|| count_elem_in_stack(*stack_b) == 0)
 		return (-1);
-	ft_rotate(stack_a);
-	ft_rotate(stack_b);
-	ft_printf("rr\n");
+	ft_reverse_rotate(stack_a);
+	ft_reverse_rotate(stack_b);
+	ft_printf("rrr\n");
 	return (0);
 }

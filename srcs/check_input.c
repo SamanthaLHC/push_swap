@@ -6,7 +6,7 @@
 /*   By: sam <sam@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/15 11:48:41 by sle-huec          #+#    #+#             */
-/*   Updated: 2022/04/27 11:14:15 by sam              ###   ########.fr       */
+/*   Updated: 2022/04/27 13:14:45 by sam              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,10 +62,10 @@ int	ft_check_before_parsing(char *input, t_info *struct_info)
 	if (ft_duplicate(input) == -1)
 		return (-1);
 	if (struct_info->stack_size == 1 || struct_info->stack_size == 0)
-		return (-1);	
+		return (-1);
 	ft_atoi(input, &err);
 	if (err == -1)
-		return (-1);	
+		return (-1);
 	return (0);
 }
 

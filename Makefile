@@ -6,7 +6,7 @@
 #    By: sam <sam@student.42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/08 15:24:23 by sle-huec          #+#    #+#              #
-#    Updated: 2022/04/27 11:43:44 by sam              ###   ########.fr        #
+#    Updated: 2022/04/27 19:14:39 by sam              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,11 @@ SRCS = 		$(addprefix $(SRCS_PATH), \
 				check_input.c \
 				parsing.c \
 				mv_swap.c \
-				handle_struct.c \
+				mv_push.c \
+				mv_rotate.c \
+				mv_reverse_rotate.c \
+				utils_add_elem.c \
+				utils_handle_list.c \
 			)
 INCLUDES = -I./\
 		-I./ft_libft_printf\

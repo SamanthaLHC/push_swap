@@ -6,7 +6,7 @@
 /*   By: sam <sam@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 12:58:19 by sle-huec          #+#    #+#             */
-/*   Updated: 2022/04/27 12:15:33 by sam              ###   ########.fr       */
+/*   Updated: 2022/04/27 19:15:33 by sam              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,17 @@ void	print_arg(t_link *list)
 		list = list->next;
 	}
 }
-
+//REECRIRE COUNT ELEM POUR STACKB ET A APRES PUSH
+//MODIF DES MV  AVEC COUNT ELEM
 int	main(int ac, char **av)
 {
 	int		i;
-	t_link	*linked_list;
+	t_link	*stack_a;
+	//t_link	*stack_b;
 	t_info	struct_info;
 
-	linked_list = NULL;
+	stack_a = NULL;
+	//stack_b = NULL;
 	i = 1;
 	struct_info.stack_size = ac -1;
 	if (ac < 2)
@@ -37,13 +40,21 @@ int	main(int ac, char **av)
 	{
 		if (ft_check_before_parsing(av[i], &struct_info) == -1)
 			return (-1);
-		get_element_from_input(av[i], &linked_list);
+		get_element_from_input(av[i], &stack_a);
 		i++;
 	}
-	if (ft_sa(&linked_list, &struct_info) == -1)
+	if (ft_sa(&stack_a) == -1)
 		return (-1);
-	//^^^^^^^^^
-	print_arg(linked_list);
-	ft_free_list(linked_list);
+	print_arg(stack_a);
+
+	if (ft_ra(&stack_a) == -1)
+		return (-1);
+	print_arg(stack_a);
+	
+	if (ft_rra(&stack_a) == -1)
+		return (-1);
+	print_arg(stack_a);
+	
+	ft_free_list(stack_a);
 	return (0);
 }
