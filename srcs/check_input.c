@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_input.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sle-huec <sle-huec@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sam <sam@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/15 11:48:41 by sle-huec          #+#    #+#             */
-/*   Updated: 2022/04/25 18:53:47 by sle-huec         ###   ########.fr       */
+/*   Updated: 2022/04/27 11:14:15 by sam              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ int	ft_duplicate(char *input)
 	return (0);
 }
 
-int	ft_check_before_parsing(char *input)
+int	ft_check_before_parsing(char *input, t_info *struct_info)
 {
 	int	err;
 

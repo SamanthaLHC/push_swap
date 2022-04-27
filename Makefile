@@ -6,7 +6,7 @@
 #    By: sam <sam@student.42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/08 15:24:23 by sle-huec          #+#    #+#              #
-#    Updated: 2022/04/22 19:21:09 by sam              ###   ########.fr        #
+#    Updated: 2022/04/27 11:43:44 by sam              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,8 +19,9 @@ SRCS = 		$(addprefix $(SRCS_PATH), \
 				check_input.c \
 				parsing.c \
 				mv_swap.c \
+				handle_struct.c \
 			)
-INC = -I./\
+INCLUDES = -I./\
 		-I./ft_libft_printf\
 		-I./ft_libft_printf/libft
 
@@ -43,7 +44,7 @@ ${LIBFT}:
 
 $(OBJ_PATH)%.o: $(SRCS_PATH)%.c 
 	mkdir -p $(OBJ_PATH)
-	$(CC) $(CFLAGS) -c $< -o $@ $(INC)
+	$(CC) $(CFLAGS) -c $< -o $@ $(INCLUDES)
 
 clean:
 	rm -rf $(OBJ) $(DEP)

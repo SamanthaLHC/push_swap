@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sle-huec <sle-huec@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sam <sam@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 15:05:34 by sle-huec          #+#    #+#             */
-/*   Updated: 2022/04/25 18:51:08 by sle-huec         ###   ########.fr       */
+/*   Updated: 2022/04/27 12:16:48 by sam              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,24 +19,26 @@
 # include "libft.h"
 # include "ft_printf.h"
 
-typedef struct s_linked_list
+typedef struct s_link
 {
-	int						nb;
-	struct s_linked_list	*next;
-}							t_linked_list;
+	int				nb;
+	struct s_link	*next;
+}							t_link;
 
-typedef struct s_struct_info
+typedef struct s_info
 {
 	int	stack_size;
 	int	index_arg;
-}		t_struct_info;
+}		t_info;
 
 /* ************************************************************************** */
 /*    handle_struct.c                                                         */
 /* ************************************************************************** */
 
-void	init_struct_info(t_struct_info *struct_info);
-t_list	*ft_lstnew_int(int content);
+t_link	*ft_lstnew_int(int nb);
+t_link	*ft_link_last(t_link *lst);
+void	ft_link_back(t_link **alst, t_link *new);
+void	ft_free_list(t_link *linked_list);
 
 /* ************************************************************************** */
 /*    check_input.c                                                           */
@@ -44,22 +46,22 @@ t_list	*ft_lstnew_int(int content);
 
 int		ft_input_is_digit(char *input);
 int		ft_duplicate(char *input);
-int		ft_check_before_parsing(char *input);
+int		ft_check_before_parsing(char *input, t_info *struct_info);
 
 /* ************************************************************************** */
 /*    parsing.c                                                               */
 /* ************************************************************************** */
 
-int		get_element_from_input(char *input, t_linked_list **linked_list);
+int		get_element_from_input(char *input, t_link **stack_a);
 
 /* ************************************************************************** */
 /*    mv_swap.c                                                               */
 /* ************************************************************************** */
 
-void	ft_swap(t_list **pile);
-int		ft_sa(t_list **pile_a);
-int		ft_sb(t_list **pile_b);
-void	ft_ss(t_list **pile_a, t_list **pile_b);
+void	ft_swap(t_link **stack_a);
+int		ft_sa(t_link **stack_a, t_info *struct_info);
+int		ft_sb(t_link **stack_b, t_info *struct_info);
+void	ft_ss(t_link **stack_a, t_link **stack_b);
 
 /* ************************************************************************** */
 /*    mv_rotate.c                                                             */
