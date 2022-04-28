@@ -6,7 +6,7 @@
 /*   By: sam <sam@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 12:58:19 by sle-huec          #+#    #+#             */
-/*   Updated: 2022/04/27 19:15:33 by sam              ###   ########.fr       */
+/*   Updated: 2022/04/28 15:13:32 by sam              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,18 +43,14 @@ int	main(int ac, char **av)
 		get_element_from_input(av[i], &stack_a);
 		i++;
 	}
-	if (ft_sa(&stack_a) == -1)
+	/*
+	if (ft_pb(&stack_a, &stack_b) == -1)
 		return (-1);
 	print_arg(stack_a);
-
-	if (ft_ra(&stack_a) == -1)
-		return (-1);
-	print_arg(stack_a);
-	
-	if (ft_rra(&stack_a) == -1)
-		return (-1);
-	print_arg(stack_a);
-	
+	print_arg(stack_b);
+	*/
 	ft_free_list(stack_a);
+	//ft_free_list(stack_b);
+
 	return (0);
 }

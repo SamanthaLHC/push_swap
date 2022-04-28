@@ -6,7 +6,7 @@
 /*   By: sam <sam@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 15:05:34 by sle-huec          #+#    #+#             */
-/*   Updated: 2022/04/27 19:18:25 by sam              ###   ########.fr       */
+/*   Updated: 2022/04/28 17:22:15 by sam              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,7 @@ int		ft_check_before_parsing(char *input, t_info *struct_info);
 /* ************************************************************************** */
 
 int		get_element_from_input(char *input, t_link **stack_a);
+//int		ft_sort_stack(t_link **stack);
 
 /* ************************************************************************** */
 /*    mv_swap.c                                                               */
@@ -88,5 +89,13 @@ void	ft_reverse_rotate(t_link **stack);
 int		ft_rra(t_link **stack_a);
 int		ft_rrb(t_link **stack_b);
 int		ft_rrr(t_link **stack_a, t_link **stack_b);
+
+/* ************************************************************************** */
+/*    mv_push.c                                                               */
+/* ************************************************************************** */
+
+void	ft_push(t_link **stack_src, t_link **stack_dst);
+int		ft_pa(t_link **stack_b, t_link **stack_a);
+int		ft_pb(t_link **stack_a, t_link **stack_b);
 
 #endif
