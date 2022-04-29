@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sam <sam@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: sle-huec <sle-huec@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 15:05:34 by sle-huec          #+#    #+#             */
-/*   Updated: 2022/04/28 17:22:15 by sam              ###   ########.fr       */
+/*   Updated: 2022/04/29 14:27:30 by sle-huec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,6 @@ void	ft_link_front(t_link **alst, t_link *new);
 void	ft_free_list(t_link *linked_list);
 t_link	*ft_get_last(t_link *lst);
 int		count_elem_in_stack(t_link *stack);
-
 
 /* ************************************************************************** */
 /*    check_input.c                                                           */
@@ -97,5 +96,9 @@ int		ft_rrr(t_link **stack_a, t_link **stack_b);
 void	ft_push(t_link **stack_src, t_link **stack_dst);
 int		ft_pa(t_link **stack_b, t_link **stack_a);
 int		ft_pb(t_link **stack_a, t_link **stack_b);
+
+/* ************************************************************************** */
+/*    sort.c                                                                  */
+/* ************************************************************************** */
 
 #endif

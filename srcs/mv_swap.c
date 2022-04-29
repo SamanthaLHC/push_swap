@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   mv_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sam <sam@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: sle-huec <sle-huec@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/22 20:26:38 by sam               #+#    #+#             */
-/*   Updated: 2022/04/27 19:17:26 by sam              ###   ########.fr       */
+/*   Updated: 2022/04/29 14:23:48 by sle-huec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	ft_swap(t_link **stack)
 
 int	ft_sa(t_link **stack_a)
 {
-	if (count_elem_in_stack(*stack_a) == -1
+	if (count_elem_in_stack(*stack_a) == 1
 		|| count_elem_in_stack(*stack_a) == 0)
 		return (-1);
 	ft_swap(stack_a);
@@ -34,7 +34,7 @@ int	ft_sa(t_link **stack_a)
 
 int	ft_sb(t_link **stack_b)
 {
-	if (count_elem_in_stack(*stack_b) == -1
+	if (count_elem_in_stack(*stack_b) == 1
 		|| count_elem_in_stack(*stack_b) == 0)
 		return (-1);
 	ft_swap(stack_b);
@@ -45,9 +45,9 @@ int	ft_sb(t_link **stack_b)
 
 int	ft_ss(t_link **stack_a, t_link **stack_b)
 {
-	if (count_elem_in_stack(*stack_a) == -1
+	if (count_elem_in_stack(*stack_a) == 1
 		|| count_elem_in_stack(*stack_a) == 0
-		|| count_elem_in_stack(*stack_b) == -1
+		|| count_elem_in_stack(*stack_b) == 1
 		|| count_elem_in_stack(*stack_b) == 0)
 		return (-1);
 	ft_swap(stack_a);

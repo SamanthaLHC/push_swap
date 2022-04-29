@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sam <sam@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: sle-huec <sle-huec@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 12:58:19 by sle-huec          #+#    #+#             */
-/*   Updated: 2022/04/28 15:13:32 by sam              ###   ########.fr       */
+/*   Updated: 2022/04/29 14:21:33 by sle-huec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,7 @@ void	print_arg(t_link *list)
 		list = list->next;
 	}
 }
-//REECRIRE COUNT ELEM POUR STACKB ET A APRES PUSH
-//MODIF DES MV  AVEC COUNT ELEM
+
 int	main(int ac, char **av)
 {
 	int		i;

@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: sam <sam@student.42.fr>                    +#+  +:+       +#+         #
+#    By: sle-huec <sle-huec@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/08 15:24:23 by sle-huec          #+#    #+#              #
-#    Updated: 2022/04/27 19:14:39 by sam              ###   ########.fr        #
+#    Updated: 2022/04/29 14:27:00 by sle-huec         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,6 +24,7 @@ SRCS = 		$(addprefix $(SRCS_PATH), \
 				mv_reverse_rotate.c \
 				utils_add_elem.c \
 				utils_handle_list.c \
+				sort.c \
 			)
 INCLUDES = -I./\
 		-I./ft_libft_printf\
