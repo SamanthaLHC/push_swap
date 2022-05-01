@@ -6,9 +6,10 @@
 /*   By: sam <sam@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 18:45:15 by sle-huec          #+#    #+#             */
-/*   Updated: 2022/04/28 15:54:14 by sam              ###   ########.fr       */
+/*   Updated: 2022/05/01 18:12:12 by sam              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #include "push_swap.h"
 
@@ -44,3 +45,4 @@ void	ft_link_front(t_link **alst, t_link *new)
 	new->next = *alst;
 	*alst = new;
 }
+

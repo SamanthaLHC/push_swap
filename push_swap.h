@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sle-huec <sle-huec@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sam <sam@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 15:05:34 by sle-huec          #+#    #+#             */
-/*   Updated: 2022/04/29 14:27:30 by sle-huec         ###   ########.fr       */
+/*   Updated: 2022/05/01 19:41:39 by sam              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ int		count_elem_in_stack(t_link *stack);
 /* ************************************************************************** */
 
 int		ft_input_is_digit(char *input);
-int		ft_duplicate(char *input);
+int		ft_duplicate(t_link *stack_a);
 int		ft_check_before_parsing(char *input, t_info *struct_info);
 
 /* ************************************************************************** */
