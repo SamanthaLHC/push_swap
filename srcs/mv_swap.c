@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   mv_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sle-huec <sle-huec@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sam <sam@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/22 20:26:38 by sam               #+#    #+#             */
-/*   Updated: 2022/04/29 14:23:48 by sle-huec         ###   ########.fr       */
+/*   Updated: 2022/05/02 22:52:40 by sam              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ void	ft_swap(t_link **stack)
 	*stack = (*stack)->next;
 	tmp_head->next = (*stack)->next;
 	(*stack)->next = tmp_head;
+	tmp_head->prev = *stack;
+	(*stack)->prev = NULL;
 }
 
 int	ft_sa(t_link **stack_a)

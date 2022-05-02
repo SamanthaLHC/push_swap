@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   mv_rotate.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sle-huec <sle-huec@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sam <sam@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 15:53:33 by sle-huec          #+#    #+#             */
-/*   Updated: 2022/04/29 14:23:36 by sle-huec         ###   ########.fr       */
+/*   Updated: 2022/05/02 22:35:35 by sam              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,15 @@
 void	ft_rotate(t_link **stack)
 {
 	t_link	*first;
+	t_link	*last;
 
 	first = *stack;
 	*stack = (*stack)->next;
-	ft_get_last(*stack)->next = first;
+	last = ft_get_last(*stack);
+	last->next = first;
 	first->next = NULL;
+	first->prev = last;
+	(*stack)->prev = NULL;
 }
 
 int	ft_ra(t_link **stack_a)

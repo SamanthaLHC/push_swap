@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sle-huec <sle-huec@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sam <sam@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 15:05:34 by sle-huec          #+#    #+#             */
-/*   Updated: 2022/05/02 17:39:10 by sle-huec         ###   ########.fr       */
+/*   Updated: 2022/05/02 21:37:09 by sam              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@
 typedef struct s_link
 {
 	int				nb;
-	int				idx;
 	struct s_link	*next;
+	struct s_link	*prev;
 }							t_link;
 
 typedef struct s_info

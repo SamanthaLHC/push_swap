@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   mv_reverse_rotate.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sle-huec <sle-huec@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sam <sam@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/27 13:49:38 by sam               #+#    #+#             */
-/*   Updated: 2022/04/29 14:22:41 by sle-huec         ###   ########.fr       */
+/*   Updated: 2022/05/02 22:09:01 by sam              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,10 @@ void	ft_reverse_rotate(t_link **stack)
 	t_link	*last;
 
 	last = ft_get_last(*stack);
+	if (!last->prev)
+		return ;
+	last->prev->next = NULL;
 	ft_link_front(stack, last);
-	while (last->next != *stack)
-	{
-		last = last->next;
-	}
-	last->next = NULL;
 }
 
 int	ft_rra(t_link **stack_a)
