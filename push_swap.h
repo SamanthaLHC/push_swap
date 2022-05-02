@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sam <sam@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: sle-huec <sle-huec@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 15:05:34 by sle-huec          #+#    #+#             */
-/*   Updated: 2022/05/01 19:41:39 by sam              ###   ########.fr       */
+/*   Updated: 2022/05/02 17:39:10 by sle-huec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@
 typedef struct s_link
 {
 	int				nb;
+	int				idx;
 	struct s_link	*next;
 }							t_link;
 
@@ -46,6 +47,7 @@ void	ft_link_front(t_link **alst, t_link *new);
 void	ft_free_list(t_link *linked_list);
 t_link	*ft_get_last(t_link *lst);
 int		count_elem_in_stack(t_link *stack);
+void	ft_list_sort(t_link **stack, t_info *struct_info);
 
 /* ************************************************************************** */
 /*    check_input.c                                                           */
@@ -100,5 +102,7 @@ int		ft_pb(t_link **stack_a, t_link **stack_b);
 /* ************************************************************************** */
 /*    sort.c                                                                  */
 /* ************************************************************************** */
+
+void	ft_sort_and_set_index(char *input, t_info *struct_info);
 
 #endif

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils_handle_list.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sam <sam@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: sle-huec <sle-huec@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/27 18:10:25 by sam               #+#    #+#             */
-/*   Updated: 2022/04/27 18:51:43 by sam              ###   ########.fr       */
+/*   Updated: 2022/05/02 17:43:56 by sle-huec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,4 +47,27 @@ int	count_elem_in_stack(t_link *stack)
 		stack = stack->next;
 	}
 	return (i);
+}
+
+void	ft_list_sort(t_link **stack, t_info *struct_info)
+{
+	t_link	*cmp;
+	int		tmp;
+
+	cmp = *stack;
+	while (cmp->next)
+	{
+		if (cmp->nb > cmp->next->nb)
+		{
+			tmp = cmp->nb;
+			cmp->nb = cmp->next->nb;
+			cmp->next->nb = tmp;
+			cmp = *stack;
+		}
+		cmp = cmp->next;
+	}
+	if (struct_info->stack_size > 1)
+	{
+		ft_list_sort(stack, struct_info->stack_size - 1);
+	}
 }

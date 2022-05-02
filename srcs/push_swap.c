@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sam <sam@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: sle-huec <sle-huec@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 12:58:19 by sle-huec          #+#    #+#             */
-/*   Updated: 2022/05/01 19:44:14 by sam              ###   ########.fr       */
+/*   Updated: 2022/05/02 17:39:17 by sle-huec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,58 @@ void	print_arg(t_link *list)
 	}
 }
 
+//TODO
+//Mettre sort param et set index dans parsing.c 
+
+/*
+void	ft_sort_params(char **av, int ac)
+{
+	int	temp;
+	int	i;
+	int	j;
+
+	i = 1;
+	j = i + 1;
+	while (i < ac - 1)
+	{
+		if (av[i] > av[j])
+		{	
+			temp = av[i];
+			av[i] = av[j];
+			av[j] = temp;
+		}
+		i++;
+		j++;
+	}
+	if (ac > 1)
+	{
+		ft_sort_params(av, ac - 1);
+	}
+}
+*/
+
+/*
+void	ft_set_index(t_link **stack_a)
+{
+	t_link	*iter;
+		
+	iter = *stack_a;
+	(*stack_a)->idx = 0;
+	while (iter)
+	{
+		iter = iter->next;
+		(*stack_a)->idx++;
+	}
+}
+*/
+
 int	main(int ac, char **av)
 {
+
+	//TODO
+	//Faire une fonction check_and_parse dans parsing.c qui check, pre-sort, 
+	//set index et save dans list chainee
+	
 	int		i;
 	t_link	*stack_a;
 	//TODO
@@ -47,6 +97,11 @@ int	main(int ac, char **av)
 	}
 	if (ft_duplicate(stack_a) == -1)
 		return (-1);
+	ft_list_sort(&stack_a, &struct_info);
+	i = 1;
+	print_arg(stack_a);
+	
+		
 	//TEST
 	/*
 	if (ft_pb(&stack_a, &stack_b) == -1)
@@ -54,7 +109,7 @@ int	main(int ac, char **av)
 	print_arg(stack_a);
 	print_arg(stack_b);
 	*/
-	ft_free_list(stack_a);
+	//ft_free_list(stack_a);
 	//TODO
 	//ft_free_list(stack_b);
 

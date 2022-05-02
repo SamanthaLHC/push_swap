@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_input.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sam <sam@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: sle-huec <sle-huec@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/15 11:48:41 by sle-huec          #+#    #+#             */
-/*   Updated: 2022/05/01 19:44:45 by sam              ###   ########.fr       */
+/*   Updated: 2022/05/02 12:09:57 by sle-huec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,5 +68,6 @@ int	ft_duplicate(t_link *stack_a)
 }
 
 //TODO
+// !!!! CHECKER SI L INPUT OU MA STACK EST SORTED
 //CHECK POUR PASSER LES ZEROS
 //attention ligne vide
