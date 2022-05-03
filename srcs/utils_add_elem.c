@@ -6,7 +6,7 @@
 /*   By: sam <sam@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 18:45:15 by sle-huec          #+#    #+#             */
-/*   Updated: 2022/05/02 23:06:22 by sam              ###   ########.fr       */
+/*   Updated: 2022/05/03 14:18:37 by sam              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,5 +49,6 @@ void	ft_link_front(t_link **alst, t_link *new)
 	new->next = *alst;
 	new->prev = NULL;
 	*alst = new;
-	new->next->prev = new;
+	if (new->next != NULL)
+		new->next->prev = new;
 }

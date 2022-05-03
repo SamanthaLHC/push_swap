@@ -3,45 +3,27 @@
 /*                                                        :::      ::::::::   */
 /*   sort.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sle-huec <sle-huec@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sam <sam@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/29 14:26:33 by sle-huec          #+#    #+#             */
-/*   Updated: 2022/05/02 14:18:51 by sle-huec         ###   ########.fr       */
+/*   Updated: 2022/05/03 13:51:49 by sam              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
 #include "push_swap.h"
 
-// PRE SORT BEFORE SETING AN INDEX
-
-
-
-
-
-
-/*
-void	ft_algo(t_link **stack_a, t_link **stack_b)
+void	ft_quick_sort(t_link **stack_a, t_link **stack_b)
 {
 	t_link	*pivot;
-	t_link	*cmp;
+	t_link	*left;
+	t_link	*right;
 
 	pivot = ft_get_last(*stack_a);
-	cmp = *stack_a;
-
-******QUIK SORT*****
-Une premiere boucle dans l'input(stak_a) pour creer deux stack a partir d un pivot
-pivot defini arbitrairement sur le last
-	
-	
-	while (cmp)
-	{
-		if (cmp->nb < pivot->nb)
-			ft swap / rotate etc
-		cmp = cmp->next;
-	}
-	cmp = *stack_a;
+	right = pivot->prev;
+	left = *stack_a;
 
 	
- on tente une mediane pour identifier un pivot plus pratique qui repartira
- mieux les deux stacks
+
+}
 */
