@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   mv_push.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sle-huec <sle-huec@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sam <sam@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/27 15:35:09 by sam               #+#    #+#             */
-/*   Updated: 2022/04/29 14:24:08 by sle-huec         ###   ########.fr       */
+/*   Updated: 2022/05/04 23:08:24 by sam              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,20 @@ int	ft_pb(t_link **stack_a, t_link **stack_b)
 		return (-1);
 	ft_push(stack_a, stack_b);
 	ft_printf("pb\n");
+	return (0);
+}
+
+int	which_push(t_link **stack_src, t_link **stack_buf, int src_is_a)
+{
+	if (src_is_a)
+	{
+		if (ft_pb(stack_src, stack_buf) == -1)
+			return (-1);
+	}
+	else
+	{
+		if (ft_pa(stack_src, stack_buf) == -1)
+			return (-1);
+	}
 	return (0);
 }

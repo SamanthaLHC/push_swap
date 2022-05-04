@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_input.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sle-huec <sle-huec@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sam <sam@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/15 11:48:41 by sle-huec          #+#    #+#             */
-/*   Updated: 2022/05/02 12:09:57 by sle-huec         ###   ########.fr       */
+/*   Updated: 2022/05/04 10:43:19 by sam              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,33 @@ int	ft_duplicate(t_link *stack_a)
 	}
 	return (0);
 }
+
+	//TEST
+/*
+void	ft_test_moov(t_link **stack_a, t_link **stack_b)
+{
+	if (ft_pb(&stack_a, &stack_b) == -1)
+		return (-1);
+	print_arg(stack_a);
+	ft_printf("stack_b:\n");
+	print_arg(stack_b);
+
+	if (ft_sa(&stack_a) == -1)
+		return (-1);
+	print_arg(stack_a);
+	print_arg(stack_b);
+
+	if (ft_ra(&stack_a) == -1)
+		return (-1);
+	print_arg(stack_a);
+	print_arg(stack_b);
+	
+	if (ft_rra(&stack_a) == -1)
+		return (-1);
+	print_arg(stack_a);
+	print_arg(stack_b);
+}
+	*/
 
 //TODO
 // !!!! CHECKER SI L INPUT OU MA STACK EST SORTED

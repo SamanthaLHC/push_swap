@@ -6,7 +6,7 @@
 /*   By: sam <sam@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 15:05:34 by sle-huec          #+#    #+#             */
-/*   Updated: 2022/05/02 21:37:09 by sam              ###   ########.fr       */
+/*   Updated: 2022/05/04 23:17:10 by sam              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,6 +72,7 @@ void	ft_swap(t_link **stack_a);
 int		ft_sa(t_link **stack_a);
 int		ft_sb(t_link **stack_b);
 int		ft_ss(t_link **stack_a, t_link **stack_b);
+int		which_swap(t_link **stack, int src_is_a);
 
 /* ************************************************************************** */
 /*    mv_rotate.c                                                             */
@@ -81,6 +82,7 @@ void	ft_rotate(t_link **stack);
 int		ft_ra(t_link **stack_a);
 int		ft_rb(t_link **stack_b);
 int		ft_rr(t_link **stack_a, t_link **stack_b);
+int		which_rotate(t_link **stack, int src_is_a);
 
 /* ************************************************************************** */
 /*    mv_reverse_rotate.c                                                     */
@@ -90,6 +92,7 @@ void	ft_reverse_rotate(t_link **stack);
 int		ft_rra(t_link **stack_a);
 int		ft_rrb(t_link **stack_b);
 int		ft_rrr(t_link **stack_a, t_link **stack_b);
+int		which_rr(t_link **stack, int src_is_a);
 
 /* ************************************************************************** */
 /*    mv_push.c                                                               */
@@ -98,11 +101,14 @@ int		ft_rrr(t_link **stack_a, t_link **stack_b);
 void	ft_push(t_link **stack_src, t_link **stack_dst);
 int		ft_pa(t_link **stack_b, t_link **stack_a);
 int		ft_pb(t_link **stack_a, t_link **stack_b);
+int		which_push(t_link **stack_src, t_link **stack_buf, int src_is_a);
 
 /* ************************************************************************** */
 /*    sort.c                                                                  */
 /* ************************************************************************** */
 
-void	ft_sort_and_set_index(char *input, t_info *struct_info);
+//void	ft_sort_and_set_index(char *input, t_info *struct_info);
+int		ft_quick_sort(t_link **stack_src, t_link **stack_buf, int src_is_a);
+int		ft_is_sorted(t_link *stack);
 
 #endif
