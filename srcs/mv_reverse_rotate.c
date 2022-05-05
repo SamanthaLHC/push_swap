@@ -6,11 +6,13 @@
 /*   By: sam <sam@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/27 13:49:38 by sam               #+#    #+#             */
-/*   Updated: 2022/05/05 16:10:34 by sam              ###   ########.fr       */
+/*   Updated: 2022/05/05 20:07:25 by sam              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+//le dernier devient le premier 
 
 void	ft_reverse_rotate(t_link **stack)
 {

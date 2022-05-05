@@ -6,7 +6,7 @@
 /*   By: sam <sam@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 12:58:19 by sle-huec          #+#    #+#             */
-/*   Updated: 2022/05/05 17:25:18 by sam              ###   ########.fr       */
+/*   Updated: 2022/05/05 20:15:08 by sam              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ int	main(int ac, char **av)
 	if (ft_duplicate(stack_a) == -1)
 		return (-1);
 	ft_quick_sort(&stack_a, &stack_b, 1, 1);
+	// ICI merge stack(val de retour ptr sur la stack_a)
 	//TEST
 	
 	print_arg(stack_a);

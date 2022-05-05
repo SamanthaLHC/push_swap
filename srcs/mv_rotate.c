@@ -6,11 +6,13 @@
 /*   By: sam <sam@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 15:53:33 by sle-huec          #+#    #+#             */
-/*   Updated: 2022/05/05 16:10:20 by sam              ###   ########.fr       */
+/*   Updated: 2022/05/05 20:07:49 by sam              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+//le premier devient le dernier
 
 void	ft_rotate(t_link **stack)
 {
