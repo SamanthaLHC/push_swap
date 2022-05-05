@@ -6,7 +6,7 @@
 /*   By: sam <sam@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/29 14:26:33 by sle-huec          #+#    #+#             */
-/*   Updated: 2022/05/05 17:32:55 by sam              ###   ########.fr       */
+/*   Updated: 2022/05/05 19:08:25 by sam              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 int	ft_save_ro(t_link *r_o, t_link **s_src, t_link **s_buf, int src_is_a)
 {
 	t_link	*last_keep;
-	ft_printf("r_o->prev->nb: %d\n", r_o->prev->nb);
 
 	last_keep = r_o->prev;
 	while (last_keep->next != NULL)
@@ -43,29 +42,40 @@ int	ft_restore_ro(t_link **s_src, t_link **s_buf, int src_is_a,
 
 int	ft_split_pivot(t_link **stack_src, t_link **stack_buf, int src_is_a)
 {
+	//convention boolean commence par is is_src_a
 	t_link	*pivot;
 
 	pivot = ft_get_last(*stack_src);
 	//debugg
-	ft_printf("bonjour je suis la variable pivot et je vaux: %d\n", pivot->nb);
+	ft_printf("pivot: %d\n", pivot->nb);
 	while (*stack_src && *stack_src != pivot)
 	{
-		ft_printf("split en cours dans le while\n");
+		//debugg
+		ft_printf("split en cours\n");
+		ft_printf("stack_src:\n");
 		print_arg(*stack_src);
+		ft_printf("stack_buf:\n");
 		print_arg(*stack_buf);
 		
 		if ((*stack_src)->nb < pivot->nb)
 		{	
+			//push_to_right_stack
 			if (which_push(stack_src, stack_buf, src_is_a) == -1)
 				return (-1);
+			//debugg
+			ft_printf("stack_src:\n");
 			print_arg(*stack_src);
+			ft_printf("stack_buf:\n");
 			print_arg(*stack_buf);
 		}
 		else
 		{
 			if (which_rotate(stack_src, src_is_a) == -1)
 				return (-1);
+			//debugg
+			ft_printf("stack_src:\n");
 			print_arg(*stack_src);
+			ft_printf("stack_buf:\n");
 			print_arg(*stack_buf);
 		}
 	}
@@ -77,6 +87,7 @@ int	ft_quick_sort(t_link **stack_src, t_link **stack_buf, int src_is_a, int call
 	t_link	*r_o;
 	t_link	*save_last_ro;
 
+	//?
 	r_o = *stack_buf;
 	//DEBUGG
 	printf("call : %d\n src_is_a:%d\n", call, src_is_a);
@@ -92,26 +103,33 @@ int	ft_quick_sort(t_link **stack_src, t_link **stack_buf, int src_is_a, int call
 			return (0);
 		}
 		// est ce checke si c est trie ??? 
-		
+		//
 		if (ft_quick_sort(stack_src, stack_buf, src_is_a, call + 1) == -1)
 		{
 			//debugg
 			ft_printf("deuxieme appel quick sort\n");
+			ft_printf("stack_src:\n");
 			print_arg(*stack_src);
+			ft_printf("stack_buf:\n");
 			print_arg(*stack_buf);
 			return (-1);
 		}
+		// si ro null ??
 		if (r_o != *stack_buf)
+		//if
 		{
 			ft_printf("problem is here\n");
 			save_last_ro = ft_get_last(*stack_buf);
-			ft_printf("bonjour je suis la variable save_last_ro et je vaux : %d\n", save_last_ro->nb);
-			if (ft_save_ro(r_o, stack_src, stack_buf, !src_is_a) == -1)
-				return (-1);
-			if (ft_quick_sort(stack_buf, stack_src, !src_is_a, call + 1) == -1)
-				return (-1);
-			if (ft_restore_ro(stack_src, stack_buf, !src_is_a, save_last_ro) == -1)
-				return (-1);
+			ft_printf("variable save_last_ro : %d\n", save_last_ro->nb);
+			if (r_o != NULL && r_o->prev != NULL)
+			{
+				if (ft_save_ro(r_o, stack_src, stack_buf, !src_is_a) == -1)
+					return (-1);
+				if (ft_quick_sort(stack_buf, stack_src, !src_is_a, call + 1) == -1)
+					return (-1);
+				if (ft_restore_ro(stack_src, stack_buf, !src_is_a, save_last_ro) == -1)
+					return (-1);
+			}
 		}
 	//TODO
 	// ICI MERGEr LES DEUX STACKS TRIEES
