@@ -6,7 +6,7 @@
 /*   By: sam <sam@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/27 18:10:25 by sam               #+#    #+#             */
-/*   Updated: 2022/05/05 10:27:00 by sam              ###   ########.fr       */
+/*   Updated: 2022/05/05 17:25:30 by sam              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,4 +58,13 @@ int	ft_is_sorted(t_link *stack)
 		stack = stack->next;
 	}
 	return (0);
+}
+
+void	print_arg(t_link *list)
+{
+	while (list)
+	{
+		ft_printf("%d\n", list->nb);
+		list = list->next;
+	}
 }

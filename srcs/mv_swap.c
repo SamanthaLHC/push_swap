@@ -6,7 +6,7 @@
 /*   By: sam <sam@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/22 20:26:38 by sam               #+#    #+#             */
-/*   Updated: 2022/05/04 23:18:06 by sam              ###   ########.fr       */
+/*   Updated: 2022/05/05 16:10:46 by sam              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,12 +62,12 @@ int	which_swap(t_link **stack, int src_is_a)
 {
 	if (src_is_a)
 	{
-		if (ft_sb(stack) == -1)
+		if (ft_sa(stack) == -1)
 			return (-1);
 	}
 	else
 	{
-		if (ft_sa(stack) == -1)
+		if (ft_sb(stack) == -1)
 			return (-1);
 	}
 	return (0);

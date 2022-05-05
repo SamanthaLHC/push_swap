@@ -6,21 +6,14 @@
 /*   By: sam <sam@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 12:58:19 by sle-huec          #+#    #+#             */
-/*   Updated: 2022/05/05 15:30:03 by sam              ###   ########.fr       */
+/*   Updated: 2022/05/05 17:25:18 by sam              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
 //TEST
-void	print_arg(t_link *list)
-{
-	while (list)
-	{
-		ft_printf("%d\n", list->nb);
-		list = list->next;
-	}
-}
+
 
 int	main(int ac, char **av)
 {
@@ -44,7 +37,7 @@ int	main(int ac, char **av)
 	}
 	if (ft_duplicate(stack_a) == -1)
 		return (-1);
-	ft_quick_sort(&stack_a, &stack_b, 1);
+	ft_quick_sort(&stack_a, &stack_b, 1, 1);
 	//TEST
 	
 	print_arg(stack_a);

@@ -6,7 +6,7 @@
 /*   By: sam <sam@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 15:53:33 by sle-huec          #+#    #+#             */
-/*   Updated: 2022/05/04 23:12:42 by sam              ###   ########.fr       */
+/*   Updated: 2022/05/05 16:10:20 by sam              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,12 +63,12 @@ int	which_rotate(t_link **stack, int src_is_a)
 {
 	if (src_is_a)
 	{
-		if (ft_rb(stack) == -1)
+		if (ft_ra(stack) == -1)
 			return (-1);
 	}
 	else
 	{
-		if (ft_ra(stack) == -1)
+		if (ft_rb(stack) == -1)
 			return (-1);
 	}
 	return (0);
