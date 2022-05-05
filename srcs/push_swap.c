@@ -6,7 +6,7 @@
 /*   By: sam <sam@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 12:58:19 by sle-huec          #+#    #+#             */
-/*   Updated: 2022/05/04 23:40:40 by sam              ###   ########.fr       */
+/*   Updated: 2022/05/05 15:30:03 by sam              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,14 +44,13 @@ int	main(int ac, char **av)
 	}
 	if (ft_duplicate(stack_a) == -1)
 		return (-1);
-	//ft_quick_sort(&stack_a, &stack_b);
+	ft_quick_sort(&stack_a, &stack_b, 1);
 	//TEST
-	/*
+	
 	print_arg(stack_a);
 	ft_printf("stack_b:\n");
 	print_arg(stack_b);
-	*/
-	ft_printf("%d\n", ft_is_sorted(stack_a));
+	
 	ft_free_list(stack_a);
 	ft_free_list(stack_b);
 	return (0);

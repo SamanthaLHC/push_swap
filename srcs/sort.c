@@ -6,19 +6,36 @@
 /*   By: sam <sam@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/29 14:26:33 by sle-huec          #+#    #+#             */
-/*   Updated: 2022/05/04 23:42:17 by sam              ###   ########.fr       */
+/*   Updated: 2022/05/05 15:53:34 by sam              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	ft_is_sorted(t_link *stack)
+int	ft_save_ro(t_link *r_o, t_link **s_src, t_link **s_buf, int src_is_a)
 {
-	while (stack && stack->next)
+	t_link	*last_keep;
+
+	last_keep = r_o->prev;
+	while (last_keep->next != NULL)
 	{
-		if (stack->nb > stack->next->nb)
+		if (which_rr(s_buf, !src_is_a) == -1)
 			return (-1);
-		stack = stack->next;
+		if (which_push(s_buf, s_src, !src_is_a) == -1)
+			return (-1);
+	}
+	return (0);
+}
+
+int	ft_restore_ro(t_link **s_src, t_link **s_buf, int src_is_a,
+	t_link *save_last_ro)
+{
+	while (!save_last_ro)
+	{
+		if (which_push(s_src, s_buf, src_is_a) == -1)
+			return (-1);
+		if (which_rr(s_buf, !src_is_a) == -1)
+			return (-1);
 	}
 	return (0);
 }
@@ -47,21 +64,27 @@ int	ft_split_pivot(t_link **stack_src, t_link **stack_buf, int src_is_a)
 int	ft_quick_sort(t_link **stack_src, t_link **stack_buf, int src_is_a)
 {
 	t_link	*r_o;
+	t_link	*save_last_ro;
 
 	r_o = *stack_buf;
-	if (ft_split_pivot(stack_src, stack_buf, src_is_a) == -1)
-		return (-1);
-	if (ft_quick_sort(stack_src, stack_buf, src_is_a) == -1)
-		return (-1);
-//	ft_save_ro();
-//	ft_quick_sort(buf, src, !src_is_a);
-//	ft_restore_ro();
+	if (ft_is_sorted(*stack_src) == -1)
+	{
+		if (ft_split_pivot(stack_src, stack_buf, src_is_a) == -1)
+			return (0);
+		if (ft_quick_sort(stack_src, stack_buf, src_is_a) == -1)
+			return (-1);
+		save_last_ro = ft_get_last(*stack_buf);
+		if (ft_save_ro(r_o, stack_src, stack_buf, !src_is_a) == -1)
+			return (-1);
+		if (ft_quick_sort(stack_buf, stack_src, !src_is_a) == -1)
+			return (-1);
+		if (ft_restore_ro(stack_src, stack_buf, !src_is_a, save_last_ro) == -1)
+			return (-1);
+	//TODO
+	// ICI MERGE LES DEUX STACKS TRIEES
+	}
 	return (0);
 }
-
-// gerer le tri par la recursion inpiree de quick sort
-
-//identifier quelle stack a le role de temporary storage
 
 // idee opti:
 

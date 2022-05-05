@@ -6,7 +6,7 @@
 /*   By: sam <sam@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 15:05:34 by sle-huec          #+#    #+#             */
-/*   Updated: 2022/05/04 23:17:10 by sam              ###   ########.fr       */
+/*   Updated: 2022/05/05 10:28:04 by sam              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,7 @@ void	ft_free_list(t_link *linked_list);
 t_link	*ft_get_last(t_link *lst);
 int		count_elem_in_stack(t_link *stack);
 void	ft_list_sort(t_link **stack, t_info *struct_info);
+int		ft_is_sorted(t_link *stack);
 
 /* ************************************************************************** */
 /*    check_input.c                                                           */
@@ -108,7 +109,7 @@ int		which_push(t_link **stack_src, t_link **stack_buf, int src_is_a);
 /* ************************************************************************** */
 
 //void	ft_sort_and_set_index(char *input, t_info *struct_info);
+int		ft_split_pivot(t_link **stack_src, t_link **stack_buf, int src_is_a);
 int		ft_quick_sort(t_link **stack_src, t_link **stack_buf, int src_is_a);
-int		ft_is_sorted(t_link *stack);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: sam <sam@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/27 18:10:25 by sam               #+#    #+#             */
-/*   Updated: 2022/05/02 23:07:13 by sam              ###   ########.fr       */
+/*   Updated: 2022/05/05 10:27:00 by sam              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,24 +49,13 @@ int	count_elem_in_stack(t_link *stack)
 	return (i);
 }
 
-/*
-void	ft_list_sort(t_link **stack, t_info *struct_info)
+int	ft_is_sorted(t_link *stack)
 {
-	t_link	*cmp;
-	int		tmp;
-
-	cmp = *stack;
-	while (cmp->next)
+	while (stack && stack->next)
 	{
-		if (cmp->nb > cmp->next->nb)
-		{
-			tmp = cmp->nb;
-			cmp->nb = cmp->next->nb;
-			cmp->next->nb = tmp;
-			cmp = *stack;
-		}
-		else
-			cmp = cmp->next;
+		if (stack->nb > stack->next->nb)
+			return (-1);
+		stack = stack->next;
 	}
+	return (0);
 }
-*/
