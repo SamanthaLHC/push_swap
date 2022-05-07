@@ -6,7 +6,7 @@
 #    By: sam <sam@student.42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/08 15:24:23 by sle-huec          #+#    #+#              #
-#    Updated: 2022/05/07 13:11:34 by sam              ###   ########.fr        #
+#    Updated: 2022/05/07 18:52:02 by sam              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,6 +24,7 @@ SRCS = 		$(addprefix $(SRCS_PATH), \
 				mv_reverse_rotate.c \
 				utils_add_elem.c \
 				utils_handle_list.c \
+				utils_sort.c \
 				sort.c \
 			)
 INCLUDES = -I./\

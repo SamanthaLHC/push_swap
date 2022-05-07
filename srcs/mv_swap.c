@@ -6,7 +6,7 @@
 /*   By: sam <sam@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/22 20:26:38 by sam               #+#    #+#             */
-/*   Updated: 2022/05/07 13:09:22 by sam              ###   ########.fr       */
+/*   Updated: 2022/05/07 19:02:39 by sam              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ void	ft_swap(t_link **stack)
 	tmp_head->next = (*stack)->next;
 	(*stack)->next = tmp_head;
 	tmp_head->prev = *stack;
+	if (tmp_head->next)
+		tmp_head->next->prev = tmp_head;
 	(*stack)->prev = NULL;
 }
 
