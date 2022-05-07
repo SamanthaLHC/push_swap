@@ -6,7 +6,7 @@
 /*   By: sam <sam@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/07 13:12:17 by sam               #+#    #+#             */
-/*   Updated: 2022/05/07 19:03:28 by sam              ###   ########.fr       */
+/*   Updated: 2022/05/07 19:22:50 by sam              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,13 +38,13 @@ void	ft_sort_three(t_link **stack)
 		ft_ra(stack);
 		ft_sa(stack);
 	}
-	else if (first > mid && mid < last)
+	else if (first > mid && first > last)
 		ft_ra(stack);
-	else if (first > mid && mid < last)
+	else if (first > mid && first < last)
 		ft_sa(stack);
-	else if (first < mid && mid > last)
+	else if (first < mid && first > last)
 		ft_rra(stack);
-	else if (first < mid && first < last)
+	else if (first < mid && mid > last)
 	{
 		ft_rra(stack);
 		ft_sa(stack);
