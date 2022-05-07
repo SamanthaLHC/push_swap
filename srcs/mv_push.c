@@ -6,7 +6,7 @@
 /*   By: sam <sam@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/27 15:35:09 by sam               #+#    #+#             */
-/*   Updated: 2022/05/06 00:14:30 by sam              ###   ########.fr       */
+/*   Updated: 2022/05/07 13:07:26 by sam              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,24 +21,19 @@ void	ft_push(t_link **stack_src, t_link **stack_dst)
 	*stack_src = new_head_src;
 }
 
-int	ft_pa(t_link **stack_b, t_link **stack_a)
+void	ft_pa(t_link **stack_b, t_link **stack_a)
 {
-	if (count_elem_in_stack(*stack_b) == 0)
-		return (-1);
 	ft_push(stack_b, stack_a);
 	ft_printf("pa\n");
-	return (0);
 }
 
-int	ft_pb(t_link **stack_a, t_link **stack_b)
+void	ft_pb(t_link **stack_a, t_link **stack_b)
 {
-	if (count_elem_in_stack(*stack_a) == 0)
-		return (-1);
 	ft_push(stack_a, stack_b);
 	ft_printf("pb\n");
-	return (0);
 }
 
+/*
 int	which_push(t_link **stack_src, t_link **stack_buf, int src_is_a)
 {
 	if (src_is_a)
@@ -53,3 +48,4 @@ int	which_push(t_link **stack_src, t_link **stack_buf, int src_is_a)
 	}
 	return (0);
 }
+*/

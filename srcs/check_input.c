@@ -6,7 +6,7 @@
 /*   By: sam <sam@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/15 11:48:41 by sle-huec          #+#    #+#             */
-/*   Updated: 2022/05/04 10:43:19 by sam              ###   ########.fr       */
+/*   Updated: 2022/05/07 13:16:34 by sam              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,8 +93,3 @@ void	ft_test_moov(t_link **stack_a, t_link **stack_b)
 	print_arg(stack_b);
 }
 	*/
-
-//TODO
-// !!!! CHECKER SI L INPUT OU MA STACK EST SORTED
-//CHECK POUR PASSER LES ZEROS
-//attention ligne vide

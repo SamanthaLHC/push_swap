@@ -6,7 +6,7 @@
 /*   By: sam <sam@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/27 18:10:25 by sam               #+#    #+#             */
-/*   Updated: 2022/05/05 17:25:30 by sam              ###   ########.fr       */
+/*   Updated: 2022/05/07 13:14:07 by sam              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,17 +47,6 @@ int	count_elem_in_stack(t_link *stack)
 		stack = stack->next;
 	}
 	return (i);
-}
-
-int	ft_is_sorted(t_link *stack)
-{
-	while (stack && stack->next)
-	{
-		if (stack->nb > stack->next->nb)
-			return (-1);
-		stack = stack->next;
-	}
-	return (0);
 }
 
 void	print_arg(t_link *list)

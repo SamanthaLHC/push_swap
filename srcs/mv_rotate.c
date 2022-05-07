@@ -6,7 +6,7 @@
 /*   By: sam <sam@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 15:53:33 by sle-huec          #+#    #+#             */
-/*   Updated: 2022/05/05 20:07:49 by sam              ###   ########.fr       */
+/*   Updated: 2022/05/07 13:08:43 by sam              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,39 +28,26 @@ void	ft_rotate(t_link **stack)
 	(*stack)->prev = NULL;
 }
 
-int	ft_ra(t_link **stack_a)
+void	ft_ra(t_link **stack_a)
 {
-	if (count_elem_in_stack(*stack_a) == 1
-		|| count_elem_in_stack(*stack_a) == 0)
-		return (-1);
 	ft_rotate(stack_a);
 	ft_printf("ra\n");
-	return (0);
 }
 
-int	ft_rb(t_link **stack_b)
+void	ft_rb(t_link **stack_b)
 {
-	if (count_elem_in_stack(*stack_b) == 1
-		|| count_elem_in_stack(*stack_b) == 0)
-		return (-1);
 	ft_rotate(stack_b);
 	ft_printf("rb\n");
-	return (0);
 }
 
-int	ft_rr(t_link **stack_a, t_link **stack_b)
+void	ft_rr(t_link **stack_a, t_link **stack_b)
 {
-	if (count_elem_in_stack(*stack_a) == 1
-		|| count_elem_in_stack(*stack_a) == 0
-		|| count_elem_in_stack(*stack_b) == 1
-		|| count_elem_in_stack(*stack_b) == 0)
-		return (-1);
 	ft_rotate(stack_a);
 	ft_rotate(stack_b);
 	ft_printf("rr\n");
-	return (0);
 }
 
+/*
 int	which_rotate(t_link **stack, int src_is_a)
 {
 	if (src_is_a)
@@ -75,3 +62,4 @@ int	which_rotate(t_link **stack, int src_is_a)
 	}
 	return (0);
 }
+*/
