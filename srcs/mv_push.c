@@ -6,7 +6,7 @@
 /*   By: sam <sam@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/27 15:35:09 by sam               #+#    #+#             */
-/*   Updated: 2022/05/07 13:07:26 by sam              ###   ########.fr       */
+/*   Updated: 2022/05/07 19:33:44 by sam              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,19 +33,10 @@ void	ft_pb(t_link **stack_a, t_link **stack_b)
 	ft_printf("pb\n");
 }
 
-/*
-int	which_push(t_link **stack_src, t_link **stack_buf, int src_is_a)
+void	ft_push_until_three(t_link **stack_a, t_link **stack_b)
 {
-	if (src_is_a)
+	while (count_elem_in_stack(*stack_a) > 3)
 	{
-		if (ft_pb(stack_src, stack_buf) == -1)
-			return (-1);
+		ft_pb(stack_a, stack_b);
 	}
-	else
-	{
-		if (ft_pa(stack_src, stack_buf) == -1)
-			return (-1);
-	}
-	return (0);
 }
-*/

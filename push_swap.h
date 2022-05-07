@@ -6,7 +6,7 @@
 /*   By: sam <sam@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 15:05:34 by sle-huec          #+#    #+#             */
-/*   Updated: 2022/05/07 18:50:55 by sam              ###   ########.fr       */
+/*   Updated: 2022/05/07 19:34:23 by sam              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,6 +107,7 @@ void	ft_rrr(t_link **stack_a, t_link **stack_b);
 void	ft_push(t_link **stack_src, t_link **stack_dst);
 void	ft_pa(t_link **stack_b, t_link **stack_a);
 void	ft_pb(t_link **stack_a, t_link **stack_b);
+void	ft_push_until_three(t_link **stack_a, t_link **stack_b);
 //int	which_push(t_link **stack_src, t_link **stack_buf, int src_is_a);
 
 /* ************************************************************************** */
