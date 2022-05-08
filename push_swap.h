@@ -6,7 +6,7 @@
 /*   By: sam <sam@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 15:05:34 by sle-huec          #+#    #+#             */
-/*   Updated: 2022/05/08 14:07:56 by sam              ###   ########.fr       */
+/*   Updated: 2022/05/08 15:28:00 by sam              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,13 +63,16 @@ void	ft_free_list(t_link *linked_list);
 t_link	*ft_get_last(t_link *lst);
 int		count_elem_in_stack(t_link *stack);
 void	print_arg(t_link *list);
+int		ft_is_sorted(t_link *stack);
 
 /* ************************************************************************** */
 /*    utils_sort.c                                                            */
 /* ************************************************************************** */
 
-int		ft_is_sorted(t_link *stack);
 void	ft_sort_three(t_link **stack);
+t_link	*get_smallest(t_link *stack);
+t_link	*get_insert_pos(t_link *stack_a, int elem);
+int		get_nb_move_and_way(t_link	*pos, t_way *way);
 
 /* ************************************************************************** */
 /*    check_input.c                                                           */
@@ -129,7 +132,8 @@ void	ft_push_until_three(t_link **stack_a, t_link **stack_b);
 /*    sort.c                                                                  */
 /* ************************************************************************** */
 
-
-
+void	select_elem_to_push(t_link **stack_a, t_link **stack_b,
+			t_score *best_score);
+void	insert_sort(t_link **stack_a, t_link **stack_b);
 
 #endif
