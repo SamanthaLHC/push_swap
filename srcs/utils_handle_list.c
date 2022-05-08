@@ -6,7 +6,7 @@
 /*   By: sam <sam@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/27 18:10:25 by sam               #+#    #+#             */
-/*   Updated: 2022/05/07 14:57:01 by sam              ###   ########.fr       */
+/*   Updated: 2022/05/08 13:32:58 by sam              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,17 @@ int	count_elem_in_stack(t_link *stack)
 	return (i);
 }
 
+int	ft_is_sorted(t_link *stack)
+{
+	while (stack && stack->next)
+	{
+		if (stack->nb > stack->next->nb)
+			return (0);
+		stack = stack->next;
+	}
+	return (1);
+}
+
 void	print_arg(t_link *list)
 {
 	while (list)
@@ -57,5 +68,3 @@ void	print_arg(t_link *list)
 		list = list->next;
 	}
 }
-
-//ft_find_median

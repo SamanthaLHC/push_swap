@@ -6,7 +6,7 @@
 /*   By: sam <sam@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 15:05:34 by sle-huec          #+#    #+#             */
-/*   Updated: 2022/05/07 19:34:23 by sam              ###   ########.fr       */
+/*   Updated: 2022/05/08 14:07:56 by sam              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,18 +19,33 @@
 # include "libft.h"
 # include "ft_printf.h"
 
+typedef enum rotate_way
+{
+	ROTATE,
+	ROT_REVERSE,
+}			t_way;
+
 typedef struct s_link
 {
 	int				nb;
 	struct s_link	*next;
 	struct s_link	*prev;
-}							t_link;
+}					t_link;
 
 typedef struct s_info
 {
 	int		stack_size;
-	int		index_arg;
-}		t_info;
+}			t_info;
+
+typedef struct s_score
+{
+	t_link	*pos_in_a;
+	t_link	*pos_in_b;
+	t_way	way_a;
+	t_way	way_b;
+	int		moves_a;
+	int		moves_b;
+}			t_score;
 
 /* ************************************************************************** */
 /*    utils_add_elem.c                                                        */
