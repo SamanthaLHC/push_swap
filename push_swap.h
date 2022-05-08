@@ -6,7 +6,7 @@
 /*   By: sam <sam@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 15:05:34 by sle-huec          #+#    #+#             */
-/*   Updated: 2022/05/08 16:37:20 by sam              ###   ########.fr       */
+/*   Updated: 2022/05/08 17:48:06 by sam              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,7 +96,6 @@ void	ft_swap(t_link **stack_a);
 void	ft_sa(t_link **stack_a);
 void	ft_sb(t_link **stack_b);
 void	ft_ss(t_link **stack_a, t_link **stack_b);
-//int	which_swap(t_link **stack, int src_is_a);
 
 /* ************************************************************************** */
 /*    mv_rotate.c                                                             */
@@ -106,7 +105,6 @@ void	ft_rotate(t_link **stack);
 void	ft_ra(t_link **stack_a);
 void	ft_rb(t_link **stack_b);
 void	ft_rr(t_link **stack_a, t_link **stack_b);
-//int	which_rotate(t_link **stack, int src_is_a);
 
 /* ************************************************************************** */
 /*    mv_reverse_rotate.c                                                     */
@@ -116,7 +114,6 @@ void	ft_reverse_rotate(t_link **stack);
 void	ft_rra(t_link **stack_a);
 void	ft_rrb(t_link **stack_b);
 void	ft_rrr(t_link **stack_a, t_link **stack_b);
-//int	which_rr(t_link **stack, int src_is_a);
 
 /* ************************************************************************** */
 /*    mv_push.c                                                               */
@@ -126,7 +123,6 @@ void	ft_push(t_link **stack_src, t_link **stack_dst);
 void	ft_pa(t_link **stack_b, t_link **stack_a);
 void	ft_pb(t_link **stack_a, t_link **stack_b);
 void	ft_push_until_three(t_link **stack_a, t_link **stack_b);
-//int	which_push(t_link **stack_src, t_link **stack_buf, int src_is_a);
 
 /* ************************************************************************** */
 /*    sort.c                                                                  */
@@ -135,11 +131,6 @@ void	ft_push_until_three(t_link **stack_a, t_link **stack_b);
 void	select_elem_to_push(t_link **stack_a, t_link **stack_b,
 			t_score *best_score);
 void	insert_sort(t_link **stack_a, t_link **stack_b);
-
-/* ************************************************************************** */
-/*    opti.c                                                                  */
-/* ************************************************************************** */
-
 
 
 #endif

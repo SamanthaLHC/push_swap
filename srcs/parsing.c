@@ -6,7 +6,7 @@
 /*   By: sam <sam@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/21 10:19:00 by sam               #+#    #+#             */
-/*   Updated: 2022/05/07 13:09:40 by sam              ###   ########.fr       */
+/*   Updated: 2022/05/08 17:54:09 by sam              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,4 +27,3 @@ int	get_element_from_input(char *input, t_link **linked_list)
 	ft_link_back(linked_list, new_elem);
 	return (0);
 }
-

@@ -6,7 +6,7 @@
 #    By: sam <sam@student.42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/08 15:24:23 by sle-huec          #+#    #+#              #
-#    Updated: 2022/05/08 16:36:38 by sam              ###   ########.fr        #
+#    Updated: 2022/05/08 17:47:32 by sam              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,6 @@ SRCS = 		$(addprefix $(SRCS_PATH), \
 				utils_handle_list.c \
 				utils_sort.c \
 				sort.c \
-				opti.c \
 			)
 INCLUDES = -I./\
 		-I./ft_libft_printf\
