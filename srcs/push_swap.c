@@ -6,7 +6,7 @@
 /*   By: sam <sam@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 12:58:19 by sle-huec          #+#    #+#             */
-/*   Updated: 2022/05/08 15:29:18 by sam              ###   ########.fr       */
+/*   Updated: 2022/05/08 17:05:42 by sam              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,11 +41,11 @@ int	main(int ac, char **av)
 	// HERE : CHECK SI L INPUT EST SORTED 
 	ft_is_sorted(stack_a);
 	insert_sort(&stack_a, &stack_b);
-
+/*
 	print_arg(stack_a);
 	ft_printf("stack_b:\n");
 	print_arg(stack_b);
-
+*/
 	ft_free_list(stack_a);
 	ft_free_list(stack_b);
 	return (0);

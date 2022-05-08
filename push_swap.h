@@ -6,7 +6,7 @@
 /*   By: sam <sam@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 15:05:34 by sle-huec          #+#    #+#             */
-/*   Updated: 2022/05/08 15:28:00 by sam              ###   ########.fr       */
+/*   Updated: 2022/05/08 16:37:20 by sam              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -135,5 +135,11 @@ void	ft_push_until_three(t_link **stack_a, t_link **stack_b);
 void	select_elem_to_push(t_link **stack_a, t_link **stack_b,
 			t_score *best_score);
 void	insert_sort(t_link **stack_a, t_link **stack_b);
+
+/* ************************************************************************** */
+/*    opti.c                                                                  */
+/* ************************************************************************** */
+
+
 
 #endif

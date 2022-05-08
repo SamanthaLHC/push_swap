@@ -6,7 +6,7 @@
 /*   By: sam <sam@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/07 14:31:44 by sam               #+#    #+#             */
-/*   Updated: 2022/05/08 16:33:59 by sam              ###   ########.fr       */
+/*   Updated: 2022/05/08 17:04:24 by sam              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,14 @@ void	which_rotate_in_b(t_link **stack_b, t_way way)
 
 void	rotate_stacks(t_link **stack_a, t_link **stack_b, t_score *score)
 {
+	while (*stack_b != score->pos_in_b && *stack_a != score->pos_in_a
+		&& score->way_a == score->way_b)
+	{
+		if (score->way_a == ROTATE)
+			ft_rr(stack_a, stack_b);
+		if (score->way_a == ROT_REVERSE)
+			ft_rrr(stack_a, stack_b);
+	}	
 	while (*stack_a != score->pos_in_a)
 	{
 		which_rotate_in_a(stack_a, score->way_a);
