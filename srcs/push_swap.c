@@ -6,34 +6,51 @@
 /*   By: sam <sam@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 12:58:19 by sle-huec          #+#    #+#             */
-/*   Updated: 2022/05/08 17:55:00 by sam              ###   ########.fr       */
+/*   Updated: 2022/05/08 18:20:05 by sam              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	main(int ac, char **av)
+int	check_and_parse(int ac, char **input, t_link **stack_a)
 {
 	int		i;
+	t_info	struct_info;
+
+	i = 1;
+	struct_info.stack_size = ac -1;
+	while (i < ac)
+	{
+		if (ft_check_before_parsing(input[i], &struct_info) == -1)
+			return (-1);
+		i++;
+	}
+	i = 1;
+	while (i < ac)
+	{
+		get_element_from_input(input[i], stack_a);
+		i++;
+	}
+	return (0);
+}
+
+int	main(int ac, char **av)
+{
 	t_link	*stack_a;
 	t_link	*stack_b;
-	t_info	struct_info;
 
 	stack_a = NULL;
 	stack_b = NULL;
-	i = 1;
-	struct_info.stack_size = ac -1;
 	if (ac < 2)
 		return (-1);
-	while (i < ac)
-	{
-		if (ft_check_before_parsing(av[i], &struct_info) == -1)
-			return (-1);
-		get_element_from_input(av[i], &stack_a);
-		i++;
-	}
-	if (ft_duplicate(stack_a) == -1)
+	if (check_and_parse(ac, av, &stack_a))
 		return (-1);
+	if (ft_duplicate(stack_a) == -1)
+	{
+		ft_free_list(stack_a);
+		ft_free_list(stack_b);
+		return (-1);
+	}
 	if (!ft_is_sorted(stack_a))
 		insert_sort(&stack_a, &stack_b);
 	ft_free_list(stack_a);
