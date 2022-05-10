@@ -6,7 +6,7 @@
 /*   By: sle-huec <sle-huec@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 19:06:20 by sle-huec          #+#    #+#             */
-/*   Updated: 2022/05/10 19:06:25 by sle-huec         ###   ########.fr       */
+/*   Updated: 2022/05/10 20:14:44 by sle-huec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,10 +38,10 @@ int	ft_check_before_parsing(char *input, t_info *struct_info)
 		ft_putstr_fd("Error\n", 2);
 		return (-1);
 	}
-	if (struct_info->stack_size == 1 || struct_info->stack_size == 0)
-		return (-1);
 	ft_atoi(input, &err);
 	if (err == -1)
+		return (-1);
+	if (struct_info->stack_size == 1 || struct_info->stack_size == 0)
 		return (-1);
 	return (0);
 }
