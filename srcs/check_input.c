@@ -6,7 +6,7 @@
 /*   By: sle-huec <sle-huec@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 19:06:20 by sle-huec          #+#    #+#             */
-/*   Updated: 2022/05/10 20:14:44 by sle-huec         ###   ########.fr       */
+/*   Updated: 2022/05/18 12:06:01 by sle-huec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,10 @@ int	ft_input_is_digit(char *input)
 	int	i;
 
 	i = 0;
+	if (!input)
+		return (-1);
+	if (input[0] == '\0')
+		return (-1);
 	while (input[i])
 	{
 		if (input[i] == '-')
